@@ -1,7 +1,9 @@
 /**
+ * HAS PATH
  * @argument (graph, root, destination)
  * @returns boolean
- * given the adjacency map of a graph, a root node, and a destination node, determine if it is possible to get from the root to the destination
+ * given the adjacency map of an acyclic graph, a root node, and a destination node, determine if it is possible to get from the root to the destination
+ * acyclic means that there are no cyclic patterns in the graph
  */
 
 const graph = {
@@ -45,6 +47,6 @@ const hasPath_DFS_recursive = (graph, root, destination) => {
   return false;
 };
 
-console.log(hasPath_BFS(graph, 'c', 'f'));
-console.log(hasPath_DFS_iterative(graph, 'b', 'f'));
-console.log(hasPath_DFS_recursive(graph, 'b', 'f'));
+console.log(hasPath_BFS(graph, 'a', 'f'));
+console.log(hasPath_DFS_iterative(graph, 'a', 'f'));
+console.log(hasPath_DFS_recursive(graph, 'a', 'f'));
